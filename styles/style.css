@@ -139,13 +139,57 @@ header {
   gap: 20px;
 }
 
+/* some fact section */
+.fact-1 {
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 144, 14);
+  border-radius: 8px;
+  max-width: 220px;
+  padding: 20px;
+  text-align: center;
+}
+
+.fact-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.fact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: left;
+  max-width: 520px;
+}
+
+.fact-description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+  max-width: 520px;
+}
+
 /* responsive styles */
 @media screen and (max-width: 576px) {
+
   .navbar,
   .team-container {
     flex-direction: column;
   }
-  .image-content{
+
+  .image-content,
+  .fact-container{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .fact-container{
+    justify-items: center;
+  }
+  .fact-1{
+    width: 100%;
   }
 }
